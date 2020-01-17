@@ -1,0 +1,22 @@
+{
+  "name": "mongoose-pokemon-basics",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thoughtworks-jumpstart/mongoose-pokemon-basics.git"
+  },
+  "keywords": [],
+  "author": "mabel lee <yanhwa.lee@thoughtworks.com>",
+  "license": "GNU",
+  "bugs": {
+    "url": "https://github.com/thoughtworks-jumpstart/mongoose-pokemon-basics/issues"
+  },
+  "homepage": "https://github.com/thoughtworks-jumpstart/mongoose-pokemon-basics#readme"
+}
