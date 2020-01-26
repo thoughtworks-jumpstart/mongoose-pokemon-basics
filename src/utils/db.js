@@ -3,7 +3,8 @@ const mongoose = require("mongoose");
 const mongoOptions = {
   useNewUrlParser: true, // prevent deprecation warnings
   useUnifiedTopology: true,
-  useFindAndModify: false,
+  useFindAndModify: false, // findOneAndUpdate() and findOneAndRemove()
+  useCreateIndex: true, // creating index with unique
 };
 
 // will create a new db if does not exist

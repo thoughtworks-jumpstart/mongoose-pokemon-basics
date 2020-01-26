@@ -6,6 +6,7 @@ const simplePokemonSchema = Schema({
     type: String,
     required: true,
     minlength: 3,
+    unique: true,
   },
   japaneseName: String,
   baseHP: Number,

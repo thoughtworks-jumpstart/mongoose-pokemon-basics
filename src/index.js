@@ -101,12 +101,12 @@ const handleError = err => {
 //   console.log(data);
 // });
 
-// createOne({
-//   name: "Pikachu",
-//   japaneseName: "ピカチュウ",
-//   baseHP: 35,
-//   category: "Mouse Pokemon",
-// });
+createOne({
+  name: "Pikachu",
+  japaneseName: "ピカチュウ",
+  baseHP: 35,
+  category: "Mouse Pokemon",
+});
 
 findOneAndReplace(
   { name: "Squirtle" },
