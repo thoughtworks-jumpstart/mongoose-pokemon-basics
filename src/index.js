@@ -101,19 +101,24 @@ const handleError = err => {
 //   console.log(data);
 // });
 
-createOne({
-  name: "Pikachu",
-  japaneseName: "ピカチュウ",
-  baseHP: 35,
-  category: "Mouse Pokemon",
-});
+// createOne({
+//   name: "Pikachu",
+//   japaneseName: "ピカチュウ",
+//   baseHP: 35,
+//   category: "Mouse Pokemon",
+// });
 
-findOneAndReplace(
-  { name: "Squirtle" },
-  {
-    name: "Pikachu",
-    japaneseName: "ピカチュウ",
-    baseHP: 35,
-    category: "Mouse Pokemon",
-  }
-);
+// findOneAndReplace(
+//   { name: "Squirtle" },
+//   {
+//     name: "Pikachu",
+//     japaneseName: "ピカチュウ",
+//     baseHP: 35,
+//     category: "Mouse Pokemon",
+//   }
+// );
+
+findOneByName("Pikachu").then(data => {
+  console.log(`findOneByName: ${data}`);
+  console.log(data.nameWithJapanese);
+});
