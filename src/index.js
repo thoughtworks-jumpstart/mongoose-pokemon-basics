@@ -118,7 +118,7 @@ const handleError = err => {
 //   }
 // );
 
-findOneByName("Pikachu").then(data => {
-  console.log(`findOneByName: ${data}`);
-  console.log(data.nameWithJapanese);
-});
+// findOneByName("Pikachu").then((data) => {
+//   console.log(`findOneByName: ${data}`);
+//   console.log(data.nameWithJapanese);
+// });
