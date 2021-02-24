@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const simplePokemonSchema = Schema({
+const simplePokemonSchema = new Schema({
   name: {
     type: String,
     required: true,
@@ -13,7 +13,7 @@ const simplePokemonSchema = Schema({
   category: String,
 });
 
-simplePokemonSchema.virtual("nameWithJapanese").get(function() {
+simplePokemonSchema.virtual("nameWithJapanese").get(function () {
   return `${this.name} ${this.japaneseName}`;
 });
 
