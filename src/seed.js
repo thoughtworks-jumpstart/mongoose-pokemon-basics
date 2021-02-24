@@ -1,5 +1,6 @@
 require("./utils/db");
 const SimplePokemon = require("./models/simple-pokemon.model");
+const handleError = require("./utils/handleError");
 
 const createPokemonPromise = () => {
   return SimplePokemon.create([

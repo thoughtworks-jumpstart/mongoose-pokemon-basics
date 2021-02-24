@@ -1,31 +1,32 @@
 require("./utils/db");
 
 const SimplePokemon = require("./models/simple-pokemon.model");
+const handleError = require("./utils/handleError");
 
 const findAll = async () => {
   const foundPokemons = await SimplePokemon.find();
   return foundPokemons;
 };
 
-const filterByCategory = async category => {
+const filterByCategory = async (category) => {
   const regex = new RegExp(category, "gi");
   const filteredPokemons = await SimplePokemon.find({ category: regex });
   return filteredPokemons;
 };
 
-const findOneByName = async name => {
+const findOneByName = async (name) => {
   const foundPokemon = await SimplePokemon.findOne({ name: name });
   return foundPokemon;
 };
 
-const filterHPGreaterThan = async HP => {
+const filterHPGreaterThan = async (HP) => {
   const filteredPokemons = await SimplePokemon.find({
     baseHP: { $gt: HP },
   });
   return filteredPokemons;
 };
 
-const createOne = async pokemon => {
+const createOne = async (pokemon) => {
   try {
     const newPokemon = new SimplePokemon(pokemon);
     await newPokemon.save();
@@ -38,7 +39,7 @@ const createOne = async pokemon => {
   }
 };
 
-const deleteOneById = async id => {
+const deleteOneById = async (id) => {
   try {
     await SimplePokemon.findByIdAndDelete(id);
   } catch (err) {
@@ -80,10 +81,6 @@ const findOneAndUpdate = async (filter, update) => {
     { new: true }
   );
   return pokemon;
-};
-
-const handleError = err => {
-  console.error(err);
 };
 
 // findAll().then(data => {
